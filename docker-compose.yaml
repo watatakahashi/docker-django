@@ -1,0 +1,15 @@
+version: '3'
+services: 
+  # db:
+  #   image: postgres #postgresSQLを使用
+  #   environment: 
+  #     POSTGRES_HOST_AUTH_METHOD: "trust"
+  web:
+    build: . #同階層のDockerfileを使用してイメージを作る
+    command: python manage.py runserver 0.0.0.0:8080 #コンテナ起動時に実行されるコマンド
+    volumes: 
+      - .:/app #バインドマウント
+    ports: 
+      - "8080:8080" #８０００番で公開して、8000番のポートに繋ぐ
+    # depends_on: 
+    #   - db #webを起動する際は、先にDBを起動するようにする
