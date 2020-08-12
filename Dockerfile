@@ -8,4 +8,4 @@ RUN pip install django
 
 COPY . ./
 
-CMD exec python manage.py runserver 8080
+CMD exec python manage.py runserver 0.0.0.0:$PORT
