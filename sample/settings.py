@@ -25,7 +25,7 @@ SECRET_KEY = '&enc#aoaz+)-j33j3=ad$y8d+b4b7rha+b4e^#*^*p9!^07@57'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'docker-django-nngly5fkeq-an.a.run.app']
 
 
 # Application definition
